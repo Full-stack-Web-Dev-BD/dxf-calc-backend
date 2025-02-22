@@ -75,5 +75,5 @@ def process_dxf_file(dxf_file):
         'dimensions': dimensions(),
         'closed_loops': closed_loops()
     }
-
+    print(output)
     return output

@@ -1,3 +1,5 @@
+<!-- -api:{'cutting_line': 1783.3097909768544, 'surface_area': 45084.83465613809, 'dimensions': (293.3000000000001, 153.71576766497807), 'closed_loops': 19}
+cmd:{"cutting_line": 1783.3097909768544, "surface_area": 45084.83465613809, "dimensions": [293.3000000000001, 153.71576766497807], "closed_loops": 19} -->
 # DXF File Upload & Processing API
 
 ## Overview

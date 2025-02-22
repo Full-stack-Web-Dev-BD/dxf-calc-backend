@@ -89,7 +89,6 @@ def calculate_price(data, material_data):
 
 @calc_blueprint.route('/upload_dxf', methods=['POST'])
 def upload_dxf():
-
     # Verify request fields
     if 'file' not in request.files:
         return jsonify({'error': 'No file part in the request'}), 400
