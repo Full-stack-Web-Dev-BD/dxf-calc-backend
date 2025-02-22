@@ -57,14 +57,13 @@ def perform_calculation(action):
 			continue
 
 		ref = action + '_' + shape.dxftype()
-		print('Running method:', action, shape.dxftype()) 
+		# print('Running method:', action, shape.dxftype()) 
 		methods[ref](shape)
 		# print(shape, shape.dxf.handle, shape.dxf.owner, shape.uuid, shape.is_bound)
-
-		print()
+		# print()
 		shp += 1
-
 	print(f'Shapes total: {shp}\n')
+	return shp
 
 
 def main():
