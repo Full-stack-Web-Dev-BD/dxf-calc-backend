@@ -7,6 +7,11 @@ def closed_loops():
 	return loops
 
 
+def reset_loop():
+    global loops
+    loops = 0
+
+
 def increase_closed_loops(count = 1):
 	global loops
 	loops += count

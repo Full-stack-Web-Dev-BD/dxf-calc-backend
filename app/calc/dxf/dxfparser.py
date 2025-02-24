@@ -67,13 +67,14 @@ def process_dxf_file(dxf_file):
     perform_calculation('surface_area')
     perform_calculation('closed_loops')
 
-    # Create an output dictionary with your calculated metrics.
-    # (Assumes that the imported functions like total_path_length() return the calculated values.)
     output = {
         'cutting_line': total_path_length(),
         'surface_area': surface_area(),
         'dimensions': dimensions(),
         'closed_loops': closed_loops()
     }
-    print(output)
+    reset_total_length()
+    reset_loop()
+    
+    print("dxf output>>>>", output)
     return output

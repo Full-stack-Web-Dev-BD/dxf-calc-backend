@@ -6,6 +6,9 @@ from ezdxf.math import ConstructionPolyline
 
 total_length = 0
 
+def reset_total_length():
+    global total_length
+    total_length = 0
 
 def total_path_length():
 	return total_length
