@@ -14,6 +14,19 @@ a = 0
 b = 0
 
 
+def reset_surface_values():
+    global area, a, b, surface_edges
+    area = 0
+    a = 0
+    b = 0
+    surface_edges = {
+        'x_min': None,
+        'x_max': None,
+        'y_min': None,
+        'y_max': None
+    }
+
+
 def surface_area():
 	if not None in surface_edges.values():
 		calc_surface_area()

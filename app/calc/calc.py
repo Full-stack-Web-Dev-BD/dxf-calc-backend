@@ -24,24 +24,24 @@ def load_materials():
 
 
 
-def calculate_price(data, material_data):
+def calculate_price(dxf_data, material_data_json):
+    print(dxf_data)
     try:
         # Extract values
-        cutting_line = data['cutting_line']
-        closed_loops = data['closed_loops']
-        quantity = int(data['quantity'])
-        material_name = data['material_name']
-        thickness = str(data['thickness'])
+        cutting_line = dxf_data['cutting_line']
+        closed_loops = dxf_data['closed_loops']
+        quantity = int(dxf_data['quantity'])
+        material_name = dxf_data['material_name']
+        thickness = str(dxf_data['thickness'])
         
         # Get bounding box dimensions (Width, Height)
-        width_m = data['dimensions'][0] / 1000  # Convert mm → meters
-        height_m = data['dimensions'][1] / 1000  # Convert mm → meters
+        width_m = dxf_data['dimensions'][0] / 1000  # Convert mm → meters
+        height_m = dxf_data['dimensions'][1] / 1000  # Convert mm → meters
         surface_area_m2 = width_m * height_m  # Corrected surface area calculation
         
         # Fetch material parameters
-        material = material_data.get(material_name, {})
+        material = material_data_json.get(material_name, {})
         params = material.get(thickness, {})
-        print("Material>",params )
         if not params:
             return {"error": "Invalid material name or thickness"}, 400
 
@@ -54,11 +54,12 @@ def calculate_price(data, material_data):
         loop_cost_per_loop = params['loop_cost']
         setup_price = params['setup_price']
 
+
         # Price calculation (strictly as per PDF)
+
         area_cost = round(surface_area_m2 * cost_per_m2, 2)
         cutting_cost = round(cutting_line_m * cost_factor, 2)
         loop_cost = round(closed_loops * loop_cost_per_loop, 2)
-
         # Total price per unit
         unit_price = area_cost + cutting_cost + loop_cost
         total_price = round((unit_price * quantity)+setup_price, 2)  # Multiply by quantity
@@ -72,7 +73,8 @@ def calculate_price(data, material_data):
                 "cutting_cost": cutting_cost,
                 "loop_cost": loop_cost,
                 "surface_area_cost": area_cost,
-                "total_price": total_price
+                "total_price": total_price,
+                "setup_price": setup_price
             },
             "original_costs": {
                 "cost_per_m2": cost_per_m2,

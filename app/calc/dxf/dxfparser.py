@@ -74,7 +74,8 @@ def process_dxf_file(dxf_file):
         'closed_loops': closed_loops()
     }
     reset_total_length()
+    reset_surface_values()
     reset_loop()
     
-    print("dxf output>>>>", output)
+    # print("dxf output>>>>", output)
     return output
