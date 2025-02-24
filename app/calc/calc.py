@@ -41,7 +41,7 @@ def calculate_price(data, material_data):
         # Fetch material parameters
         material = material_data.get(material_name, {})
         params = material.get(thickness, {})
-
+        print("Material>",params )
         if not params:
             return {"error": "Invalid material name or thickness"}, 400
 
@@ -52,6 +52,7 @@ def calculate_price(data, material_data):
         cost_per_m2 = params['cost_per_m2']
         cost_factor = params['cost_factor']
         loop_cost_per_loop = params['loop_cost']
+        setup_price = params['setup_price']
 
         # Price calculation (strictly as per PDF)
         area_cost = round(surface_area_m2 * cost_per_m2, 2)
@@ -60,7 +61,7 @@ def calculate_price(data, material_data):
 
         # Total price per unit
         unit_price = area_cost + cutting_cost + loop_cost
-        total_price = round(unit_price * quantity, 2)  # Multiply by quantity
+        total_price = round((unit_price * quantity)+setup_price, 2)  # Multiply by quantity
 
         # Return full cost breakdown
         return {
