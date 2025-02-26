@@ -4,6 +4,10 @@ import uuid
 from flask import Blueprint, request, jsonify
 from werkzeug.utils import secure_filename
 from app.calc.dxf.dxfparser import process_dxf_file
+from utils.validators import validate_request  # Import the validator
+
+
+
 
 calc_blueprint = Blueprint('calc', __name__, url_prefix='/calc')
 
@@ -91,6 +95,42 @@ def calculate_price(dxf_data, material_data_json):
 
 
 
+@calc_blueprint.route('/update-price', methods=['POST'])
+@validate_request
+def update_price():
+    try:
+        data = request.json
+        dxf_data = {
+            'cutting_line': data['cutting_line'],
+            'surface_area': data['surface_area'],
+            'dimensions': tuple(data['dimensions']),  # Convert list to tuple
+            'closed_loops': data['closed_loops'],
+            'quantity': data['quantity'],
+            'material_name': data['material_name'],
+            'thickness': data['thickness']
+        }
+
+        # Load pricing data & calculate price
+        materials = load_materials()
+        price = calculate_price(dxf_data, materials)
+
+        # Get file URL
+        file_url = data['file_url']
+
+        # Return response
+        response = {
+            'success': True,
+            'file_url': file_url,
+            'data': dxf_data,
+            'price': price
+        }
+        return jsonify(response), 200
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+
 @calc_blueprint.route('/upload_dxf', methods=['POST'])
 def upload_dxf():
     # Verify request fields
@@ -126,6 +166,7 @@ def upload_dxf():
         # print("dxf data " , dxf_data)
         dxf_data.update({'quantity': quantity, 'material_name': material_name, 'thickness': thickness})
 
+        print("Dxf Dta is ", dxf_data)
         # Load pricing data & calculate price
         materials = load_materials()
         price = calculate_price(dxf_data, materials)
@@ -144,6 +185,3 @@ def upload_dxf():
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-    finally:
-        if os.path.exists(file_path):
-            os.remove(file_path)  # Ensure file is deleted after processing
