@@ -74,6 +74,7 @@ def calculate_price(dxf_data, material_data_json):
                 "loop_cost": loop_cost,
                 "surface_area_cost": area_cost,
                 "total_price": total_price,
+                "price_per_unit": unit_price,
                 "setup_price": setup_price
             },
             "original_costs": {

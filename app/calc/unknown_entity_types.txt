@@ -5746,3 +5746,447 @@ Unknown entity type - 2025-02-24 17:53:22.584246
 	Name: MTEXT
 	File: uploads/calc\blacha_uchwytu_60dcd88c.dxf
 
+Unknown entity type - 2025-02-26 05:15:17.335112
+	Name: HATCH
+	File: uploads/calc\blaszki_60b9fb62.dxf
+
+Unknown entity type - 2025-02-26 05:15:17.336130
+	Name: HATCH
+	File: uploads/calc\blaszki_60b9fb62.dxf
+
+Unknown entity type - 2025-02-26 05:15:17.337490
+	Name: HATCH
+	File: uploads/calc\blaszki_60b9fb62.dxf
+
+Unknown entity type - 2025-02-26 05:15:17.338535
+	Name: HATCH
+	File: uploads/calc\blaszki_60b9fb62.dxf
+
+Unknown entity type - 2025-02-26 05:15:17.339435
+	Name: HATCH
+	File: uploads/calc\blaszki_60b9fb62.dxf
+
+Unknown entity type - 2025-02-26 05:15:17.340057
+	Name: HATCH
+	File: uploads/calc\blaszki_60b9fb62.dxf
+
+Unknown entity type - 2025-02-26 06:29:01.650672
+	Name: HATCH
+	File: uploads/calc\blaszki_0e6b9a38.dxf
+
+Unknown entity type - 2025-02-26 06:29:01.652514
+	Name: HATCH
+	File: uploads/calc\blaszki_0e6b9a38.dxf
+
+Unknown entity type - 2025-02-26 06:29:01.654276
+	Name: HATCH
+	File: uploads/calc\blaszki_0e6b9a38.dxf
+
+Unknown entity type - 2025-02-26 06:29:01.655489
+	Name: HATCH
+	File: uploads/calc\blaszki_0e6b9a38.dxf
+
+Unknown entity type - 2025-02-26 06:29:01.656597
+	Name: HATCH
+	File: uploads/calc\blaszki_0e6b9a38.dxf
+
+Unknown entity type - 2025-02-26 06:29:01.657399
+	Name: HATCH
+	File: uploads/calc\blaszki_0e6b9a38.dxf
+
+Unknown entity type - 2025-02-26 06:29:46.783887
+	Name: HATCH
+	File: uploads/calc\blaszki_2d7f7c69.dxf
+
+Unknown entity type - 2025-02-26 06:29:46.785070
+	Name: HATCH
+	File: uploads/calc\blaszki_2d7f7c69.dxf
+
+Unknown entity type - 2025-02-26 06:29:46.786396
+	Name: HATCH
+	File: uploads/calc\blaszki_2d7f7c69.dxf
+
+Unknown entity type - 2025-02-26 06:29:46.787813
+	Name: HATCH
+	File: uploads/calc\blaszki_2d7f7c69.dxf
+
+Unknown entity type - 2025-02-26 06:29:46.788850
+	Name: HATCH
+	File: uploads/calc\blaszki_2d7f7c69.dxf
+
+Unknown entity type - 2025-02-26 06:29:46.789771
+	Name: HATCH
+	File: uploads/calc\blaszki_2d7f7c69.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.649641
+	Name: LWPOLYLINE
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.650413
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.651048
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.651641
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.652221
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.652860
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.653460
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.654189
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.654805
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.655437
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.656015
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.658381
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.659422
+	Name: LWPOLYLINE
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.660120
+	Name: MTEXT
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.661055
+	Name: LWPOLYLINE
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.662311
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.662978
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.663645
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.664424
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.665145
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.665733
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.666481
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.667192
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.667994
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.668574
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.669422
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.670060
+	Name: LWPOLYLINE
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.670696
+	Name: MTEXT
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.671510
+	Name: LWPOLYLINE
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.672199
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.673270
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.674746
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.675732
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.676353
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.677022
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.677709
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.678358
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.678966
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.679532
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.680316
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.680937
+	Name: LWPOLYLINE
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:30:05.681544
+	Name: MTEXT
+	File: uploads/calc\blacha_uchwytu_e07d4913.dxf
+
+Unknown entity type - 2025-02-26 06:42:52.055788
+	Name: HATCH
+	File: uploads/calc\mocowanie_lampy_v2_2mm_3eaee8d0.dxf
+
+Unknown entity type - 2025-02-26 06:42:52.060579
+	Name: HATCH
+	File: uploads/calc\mocowanie_lampy_v2_2mm_3eaee8d0.dxf
+
+Unknown entity type - 2025-02-26 06:42:52.064736
+	Name: HATCH
+	File: uploads/calc\mocowanie_lampy_v2_2mm_3eaee8d0.dxf
+
+Unknown entity type - 2025-02-26 06:42:52.067258
+	Name: HATCH
+	File: uploads/calc\mocowanie_lampy_v2_2mm_3eaee8d0.dxf
+
+Unknown entity type - 2025-02-26 06:42:52.068084
+	Name: HATCH
+	File: uploads/calc\mocowanie_lampy_v2_2mm_3eaee8d0.dxf
+
+Unknown entity type - 2025-02-26 06:42:52.069659
+	Name: HATCH
+	File: uploads/calc\mocowanie_lampy_v2_2mm_3eaee8d0.dxf
+
+Unknown entity type - 2025-02-26 08:07:37.539380
+	Name: HATCH
+	File: uploads/calc\mocowanieLampy_2mm_4898eaf8.dxf
+
+Unknown entity type - 2025-02-26 08:07:37.543580
+	Name: HATCH
+	File: uploads/calc\mocowanieLampy_2mm_4898eaf8.dxf
+
+Unknown entity type - 2025-02-26 08:07:37.544593
+	Name: HATCH
+	File: uploads/calc\mocowanieLampy_2mm_4898eaf8.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.823651
+	Name: LWPOLYLINE
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.824634
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.825476
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.826302
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.827054
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.827805
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.828742
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.830740
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.831608
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.832589
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.833588
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.834489
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.835341
+	Name: LWPOLYLINE
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.836151
+	Name: MTEXT
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.837343
+	Name: LWPOLYLINE
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.838329
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.839240
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.840132
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.841029
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.841948
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.842765
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.843510
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.844284
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.845120
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.847591
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.848544
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.849647
+	Name: LWPOLYLINE
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.850884
+	Name: MTEXT
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.851864
+	Name: LWPOLYLINE
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.852595
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.853298
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.853937
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.854546
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.855238
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.855840
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.856462
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.857232
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.857898
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.858574
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.859333
+	Name: DIMENSION
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.860143
+	Name: LWPOLYLINE
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
+Unknown entity type - 2025-02-26 08:08:54.860810
+	Name: MTEXT
+	File: uploads/calc\blacha_uchwytu_aee1feca.dxf
+
