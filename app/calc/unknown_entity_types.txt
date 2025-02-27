@@ -8374,3 +8374,27 @@ Unknown entity type - 2025-02-26 17:22:29.289700
 	Name: MTEXT
 	File: uploads/calc\blacha_uchwytu_59eba0a0.dxf
 
+Unknown entity type - 2025-02-27 09:50:47.559963
+	Name: HATCH
+	File: uploads/calc\blaszki_53c376d6.dxf
+
+Unknown entity type - 2025-02-27 09:50:47.561388
+	Name: HATCH
+	File: uploads/calc\blaszki_53c376d6.dxf
+
+Unknown entity type - 2025-02-27 09:50:47.563061
+	Name: HATCH
+	File: uploads/calc\blaszki_53c376d6.dxf
+
+Unknown entity type - 2025-02-27 09:50:47.563859
+	Name: HATCH
+	File: uploads/calc\blaszki_53c376d6.dxf
+
+Unknown entity type - 2025-02-27 09:50:47.564457
+	Name: HATCH
+	File: uploads/calc\blaszki_53c376d6.dxf
+
+Unknown entity type - 2025-02-27 09:50:47.564916
+	Name: HATCH
+	File: uploads/calc\blaszki_53c376d6.dxf
+

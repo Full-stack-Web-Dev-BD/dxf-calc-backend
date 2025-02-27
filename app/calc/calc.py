@@ -1,14 +1,12 @@
 import os
-import json
 import uuid
-from flask import Blueprint, request, jsonify
-from werkzeug.utils import secure_filename
+import json
 from app.calc.dxf.dxfparser import process_dxf_file
 from utils.validators import validate_request  # Import the validator
-
-
-
-
+from flask import Blueprint, request, jsonify
+from werkzeug.utils import secure_filename
+import ezdxf
+from ezdxf.addons.drawing import Frontend, RenderContext, svg, layout, config
 calc_blueprint = Blueprint('calc', __name__, url_prefix='/calc')
 
 UPLOAD_FOLDER = 'uploads/calc'
@@ -131,6 +129,43 @@ def update_price():
 
 
 
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() == 'dxf'
+
+def convert_dxf_to_svg(filename):
+    """ Convert DXF file to SVG and save it in the same directory """
+    folder_path = UPLOAD_FOLDER
+    dxf_path = os.path.join(folder_path, filename)
+
+    if not os.path.exists(dxf_path):
+        raise FileNotFoundError(f"DXF file not found: {dxf_path}")
+
+    doc = ezdxf.readfile(dxf_path)
+    msp = doc.modelspace()
+
+    context = RenderContext(doc)
+    backend = svg.SVGBackend()
+
+    cfg = config.Configuration(
+        background_policy=config.BackgroundPolicy.WHITE,
+        color_policy=config.ColorPolicy.BLACK
+    )
+
+    frontend = Frontend(context, backend, config=cfg)
+    frontend.draw_layout(msp)
+
+    page = layout.Page(0, 0, layout.Units.mm, margins=layout.Margins.all(10))
+    svg_string = backend.get_string(page)
+
+    svg_filename = filename.replace(".dxf", ".svg")
+    svg_path = os.path.join(folder_path, svg_filename)
+
+    with open(svg_path, "w", encoding="utf8") as svg_file:
+        svg_file.write(svg_string)
+
+    return svg_filename  # Return only the filename
+
 @calc_blueprint.route('/upload_dxf', methods=['POST'])
 def upload_dxf():
     # Verify request fields
@@ -163,21 +198,24 @@ def upload_dxf():
     try:
         # Process DXF file
         dxf_data = process_dxf_file(file_path)
-        # print("dxf data " , dxf_data)
         dxf_data.update({'quantity': quantity, 'material_name': material_name, 'thickness': thickness})
 
-        print("Dxf Dta is ", dxf_data)
         # Load pricing data & calculate price
         materials = load_materials()
         price = calculate_price(dxf_data, materials)
 
-        # Generate file URL
+        # Convert DXF to SVG
+        svg_filename = convert_dxf_to_svg(unique_filename)
+
+        # Generate file URLs
         file_url = f"http://127.0.0.1:5000/{UPLOAD_FOLDER}/{unique_filename}"
+        svg_url = f"http://127.0.0.1:5000/{UPLOAD_FOLDER}/{svg_filename}"
 
         # Return response
         response = {
             'success': True,
             'file_url': file_url,
+            'svg_url': svg_url,
             'data': dxf_data,
             'price': price
         }

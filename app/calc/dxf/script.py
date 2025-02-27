@@ -26,7 +26,7 @@ page = layout.Page( 0, 0, layout.Units.mm, margins=layout.Margins.all(10) )
 
 svg_string = backend.get_string(page)
 
-print(svg_string)
+print("svg_string")
 
-# with open("image.svg", "wt", encoding="utf8") as fp:
-#     fp.write(svg_string)
+with open("image.svg", "wt", encoding="utf8") as fp:
+    fp.write(svg_string)
