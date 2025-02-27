@@ -7,6 +7,10 @@ from flask import Blueprint, request, jsonify
 from werkzeug.utils import secure_filename
 import ezdxf
 from ezdxf.addons.drawing import Frontend, RenderContext, svg, layout, config
+
+
+
+
 calc_blueprint = Blueprint('calc', __name__, url_prefix='/calc')
 
 UPLOAD_FOLDER = 'uploads/calc'

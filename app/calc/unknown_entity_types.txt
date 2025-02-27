@@ -8770,3 +8770,27 @@ Unknown entity type - 2025-02-27 13:57:00.748979
 	Name: HATCH
 	File: uploads/calc\mocowanieLampy_2mm_8f55f35a.dxf
 
+Unknown entity type - 2025-02-27 21:08:45.347714
+	Name: HATCH
+	File: uploads/calc\blaszki_74047143.dxf
+
+Unknown entity type - 2025-02-27 21:08:45.348902
+	Name: HATCH
+	File: uploads/calc\blaszki_74047143.dxf
+
+Unknown entity type - 2025-02-27 21:08:45.350489
+	Name: HATCH
+	File: uploads/calc\blaszki_74047143.dxf
+
+Unknown entity type - 2025-02-27 21:08:45.351598
+	Name: HATCH
+	File: uploads/calc\blaszki_74047143.dxf
+
+Unknown entity type - 2025-02-27 21:08:45.352391
+	Name: HATCH
+	File: uploads/calc\blaszki_74047143.dxf
+
+Unknown entity type - 2025-02-27 21:08:45.353000
+	Name: HATCH
+	File: uploads/calc\blaszki_74047143.dxf
+
