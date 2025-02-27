@@ -8734,3 +8734,39 @@ Unknown entity type - 2025-02-27 10:36:18.516927
 	Name: HATCH
 	File: uploads/calc\blaszki_da195eec.dxf
 
+Unknown entity type - 2025-02-27 13:56:44.607814
+	Name: HATCH
+	File: uploads/calc\blaszki_d7225512.dxf
+
+Unknown entity type - 2025-02-27 13:56:44.608966
+	Name: HATCH
+	File: uploads/calc\blaszki_d7225512.dxf
+
+Unknown entity type - 2025-02-27 13:56:44.610305
+	Name: HATCH
+	File: uploads/calc\blaszki_d7225512.dxf
+
+Unknown entity type - 2025-02-27 13:56:44.611213
+	Name: HATCH
+	File: uploads/calc\blaszki_d7225512.dxf
+
+Unknown entity type - 2025-02-27 13:56:44.611806
+	Name: HATCH
+	File: uploads/calc\blaszki_d7225512.dxf
+
+Unknown entity type - 2025-02-27 13:56:44.612210
+	Name: HATCH
+	File: uploads/calc\blaszki_d7225512.dxf
+
+Unknown entity type - 2025-02-27 13:57:00.745657
+	Name: HATCH
+	File: uploads/calc\mocowanieLampy_2mm_8f55f35a.dxf
+
+Unknown entity type - 2025-02-27 13:57:00.748449
+	Name: HATCH
+	File: uploads/calc\mocowanieLampy_2mm_8f55f35a.dxf
+
+Unknown entity type - 2025-02-27 13:57:00.748979
+	Name: HATCH
+	File: uploads/calc\mocowanieLampy_2mm_8f55f35a.dxf
+
