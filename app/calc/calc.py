@@ -46,13 +46,11 @@ def create_order():
     # Validate required fields
     if "email" not in data or not data["email"].strip():
         return jsonify({"error": "Email is required"}), 400
-    if "materialDetails" not in data or not isinstance(data["materialDetails"], dict):
-        return jsonify({"error": "Material details must be a JSON object"}), 400
 
     # Insert order
     new_order = {
         "email": data["email"],
-        "materialDetails": data["materialDetails"],
+        "materialDetails":data.get("materialDetails", {}),
         "city": data.get("city", ""),
         "company": data.get("company", ""),
         "country": data.get("country", {}),
