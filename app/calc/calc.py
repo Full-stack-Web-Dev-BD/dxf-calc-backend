@@ -96,6 +96,31 @@ def finalize_order(order_id):
     updated_order["_id"] = str(updated_order["_id"])  # Convert ObjectId to string before returning
     return jsonify(updated_order), 200
 
+
+# 🔹 Find order using both email and order_id
+@calc_blueprint.route('/orders/find', methods=['GET'])
+def find_order():
+    email = request.args.get("email")
+    order_id = request.args.get("order_id")
+
+    if not email or not order_id:
+        return jsonify({"error": "Both email and order_id are required"}), 400
+
+    try:
+        order = orders_collection.find_one({"_id": ObjectId(order_id), "email": email})
+        if not order:
+            return jsonify({"error": "Order not found"}), 404
+        order["_id"] = str(order["_id"])  # Convert ObjectId to string
+        return jsonify(order), 200
+    except InvalidId:
+        return jsonify({"error": "Invalid Order ID"}), 400
+
+    
+    
+    
+    
+    
+
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
