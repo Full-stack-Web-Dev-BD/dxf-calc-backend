@@ -1,3 +1,4 @@
+from bson import ObjectId
 import os
 import uuid
 import json
@@ -7,6 +8,22 @@ from flask import Blueprint, request, jsonify
 from werkzeug.utils import secure_filename
 import ezdxf
 from ezdxf.addons.drawing import Frontend, RenderContext, svg, layout, config
+from dotenv import load_dotenv
+from pymongo import MongoClient
+from pymongo import ReturnDocument
+from bson.errors import InvalidId
+
+
+
+
+# Load Environment Variables
+load_dotenv()
+MONGO_URI = os.getenv("MONGO_URI")
+# MongoDB Connection
+client = MongoClient(MONGO_URI)
+db = client["trustifypro"]  # Database
+orders_collection = db["orders"]  # Collection
+
 
 
 
@@ -16,6 +33,68 @@ calc_blueprint = Blueprint('calc', __name__, url_prefix='/calc')
 UPLOAD_FOLDER = 'uploads/calc'
 CONFIG_PATH = 'app/config/materials.json'  # Path to material pricing JSON
 ALLOWED_EXTENSIONS = {'dxf'}
+
+
+
+
+
+# Create Order (POST)
+@calc_blueprint.route('/orders', methods=['POST'])
+def create_order():
+    data = request.json
+
+    # Validate required fields
+    if "email" not in data or not data["email"].strip():
+        return jsonify({"error": "Email is required"}), 400
+    if "materialDetails" not in data or not isinstance(data["materialDetails"], dict):
+        return jsonify({"error": "Material details must be a JSON object"}), 400
+
+    # Insert order
+    new_order = {
+        "email": data["email"],
+        "materialDetails": data["materialDetails"],
+        "city": data.get("city", ""),
+        "company": data.get("company", ""),
+        "country": data.get("country", {}),
+        "name": data.get("name", ""),
+        "phone": data.get("phone", ""),
+        "postalCode": data.get("postalCode", ""),
+        "street": data.get("street", ""),
+        "surname": data.get("surname", ""),
+        "useVAT": data.get("useVAT", False),
+        "vatNumber": data.get("vatNumber", ""),
+        "finalized": False  # Order is not finalized yet
+    }
+
+    order_id = orders_collection.insert_one(new_order).inserted_id
+    new_order["_id"] = str(order_id)
+
+    return jsonify(new_order), 201
+
+@calc_blueprint.route('/orders/finalize/<order_id>', methods=['PUT'])
+def finalize_order(order_id):
+    data = request.json
+
+    try:
+        order_id = ObjectId(order_id)  # Ensure valid ObjectId
+    except InvalidId:
+        return jsonify({"error": "Invalid Order ID"}), 400
+
+    # Exclude both `_id` and `email` from the update
+    update_data = {key: value for key, value in data.items() if key not in ["_id", "email"]}
+    update_data["finalized"] = True  # Mark order as finalized
+
+    updated_order = orders_collection.find_one_and_update(
+        {"_id": order_id},
+        {"$set": update_data},
+        return_document=ReturnDocument.AFTER  # Return updated document
+    )
+
+    if not updated_order:
+        return jsonify({"error": "Order not found"}), 404
+
+    updated_order["_id"] = str(updated_order["_id"])  # Convert ObjectId to string before returning
+    return jsonify(updated_order), 200
 
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
@@ -27,6 +106,8 @@ def allowed_file(filename):
 def load_materials():
     with open(CONFIG_PATH, 'r') as file:
         return json.load(file)
+
+
 
 
 
@@ -227,3 +308,5 @@ def upload_dxf():
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+

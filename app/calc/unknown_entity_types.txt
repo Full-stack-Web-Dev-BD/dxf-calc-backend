@@ -8794,3 +8794,51 @@ Unknown entity type - 2025-02-27 21:08:45.353000
 	Name: HATCH
 	File: uploads/calc\blaszki_74047143.dxf
 
+Unknown entity type - 2025-03-01 10:28:26.528810
+	Name: HATCH
+	File: uploads/calc\blaszki_084e2d8d.dxf
+
+Unknown entity type - 2025-03-01 10:28:26.529677
+	Name: HATCH
+	File: uploads/calc\blaszki_084e2d8d.dxf
+
+Unknown entity type - 2025-03-01 10:28:26.530598
+	Name: HATCH
+	File: uploads/calc\blaszki_084e2d8d.dxf
+
+Unknown entity type - 2025-03-01 10:28:26.531321
+	Name: HATCH
+	File: uploads/calc\blaszki_084e2d8d.dxf
+
+Unknown entity type - 2025-03-01 10:28:26.531814
+	Name: HATCH
+	File: uploads/calc\blaszki_084e2d8d.dxf
+
+Unknown entity type - 2025-03-01 10:28:26.532259
+	Name: HATCH
+	File: uploads/calc\blaszki_084e2d8d.dxf
+
+Unknown entity type - 2025-03-01 10:38:53.838863
+	Name: HATCH
+	File: uploads/calc\blaszki_eb309000.dxf
+
+Unknown entity type - 2025-03-01 10:38:53.839724
+	Name: HATCH
+	File: uploads/calc\blaszki_eb309000.dxf
+
+Unknown entity type - 2025-03-01 10:38:53.840565
+	Name: HATCH
+	File: uploads/calc\blaszki_eb309000.dxf
+
+Unknown entity type - 2025-03-01 10:38:53.841290
+	Name: HATCH
+	File: uploads/calc\blaszki_eb309000.dxf
+
+Unknown entity type - 2025-03-01 10:38:53.841784
+	Name: HATCH
+	File: uploads/calc\blaszki_eb309000.dxf
+
+Unknown entity type - 2025-03-01 10:38:53.842217
+	Name: HATCH
+	File: uploads/calc\blaszki_eb309000.dxf
+
