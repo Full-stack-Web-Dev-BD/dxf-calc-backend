@@ -332,35 +332,74 @@ def upload_dxf():
         return jsonify({'error': str(e)}), 500
 
 
-
 @calc_blueprint.route('/upload_dxf_ref', methods=['POST'])
-def upload_dxf_ref():
+def upload_dxf_file():
+    """Upload DXF file and return the file path."""
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part in the request'}), 400
+
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+
+    if not allowed_file(file.filename):
+        return jsonify({'error': 'Invalid file type. Only DXF files are allowed.'}), 400
+
+    # Generate unique file name
+    file_id = str(uuid.uuid4())[:8]  # Short unique ID
+    filename = secure_filename(file.filename)
+    unique_filename = f"{filename.rsplit('.', 1)[0]}_{file_id}.dxf"
+    file_path = os.path.join(UPLOAD_FOLDER, unique_filename)
+
+    file.save(file_path)
+
+    return jsonify({'success': True, 'file_path': file_path}), 200
+
+
+@calc_blueprint.route('/process_dxf', methods=['POST'])
+def processing_dxf_file():
+    """Process the DXF file using file path and additional fields."""
+    data = request.json
+    file_path = data.get('file_path')
+    quantity = data.get('quantity')
+    material_name = data.get('material_name')
+    thickness = data.get('thickness')
+
+    if not file_path or not os.path.exists(file_path):
+        return jsonify({'error': 'Invalid or missing file path'}), 400
+
     try:
-        if 'file' not in request.files:
-            return jsonify({'error': 'No file part in the request'}), 400
+        quantity = int(quantity)
+    except (TypeError, ValueError):
+        return jsonify({'error': 'Invalid quantity'}), 400
 
-        file = request.files['file']
-        if file.filename == '':
-            return jsonify({'error': 'No selected file'}), 400
+    if not material_name or not thickness:
+        return jsonify({'error': 'Missing material name or thickness'}), 400
 
-        if not allowed_file(file.filename):
-            return jsonify({'error': 'Invalid file type. Only DXF files are allowed.'}), 400
+    try:
+        # Process DXF file
+        dxf_data = process_dxf_file(file_path)
+        dxf_data.update({'quantity': quantity, 'material_name': material_name, 'thickness': thickness})
 
-        # Extract additional parameters
-        try:
-            quantity = int(request.form.get('quantity'))
-            material_name = request.form.get('material_name')
-            thickness = request.form.get('thickness')
-        except (TypeError, ValueError):
-            return jsonify({'error': 'Invalid quantity, material, or thickness'}), 400
+        # Load pricing data & calculate price
+        materials = load_materials()
+        price = calculate_price(dxf_data, materials)
 
-        # Generate unique file name
-        file_id = str(uuid.uuid4())[:8]  # Generate short unique ID
-        filename = secure_filename(file.filename)
-        unique_filename = f"{filename.rsplit('.', 1)[0]}_{file_id}.dxf"
-        file_path = os.path.join(UPLOAD_FOLDER, unique_filename)
+        # Convert DXF to SVG
+        svg_filename = convert_dxf_to_svg(os.path.basename(file_path))
 
-        file.save(file_path)
-        return jsonify(file_path), 200
+        # Generate file URLs
+        file_url = f"/{UPLOAD_FOLDER}/{os.path.basename(file_path)}"
+        svg_url = f"/{UPLOAD_FOLDER}/{svg_filename}"
+
+        response = {
+            'success': True,
+            'file_url': file_url,
+            'svg_url': svg_url,
+            'data': dxf_data,
+            'price': price
+        }
+        return jsonify(response), 200
+
     except Exception as e:
         return jsonify({'error': str(e)}), 500
