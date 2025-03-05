@@ -379,6 +379,7 @@ def processing_dxf_file():
     try:
         # Process DXF file
         dxf_data = process_dxf_file(file_path)
+        print("dxf data :", dxf_data)
         dxf_data.update({'quantity': quantity, 'material_name': material_name, 'thickness': thickness})
 
         # Load pricing data & calculate price
