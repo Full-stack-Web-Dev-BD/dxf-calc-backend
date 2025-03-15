@@ -1,3 +1,4 @@
+import ezdxf
 # Workpiece surface area calculation
 
 from ezdxf.math import ConstructionPolyline
@@ -125,3 +126,47 @@ def calc_extreme_points_arc(shape):
 
 	#print( points)
 	determine_most_extreme_points(points)
+
+def calc_extreme_points_insert(shape):
+    """
+    Handles the 'INSERT' type DXF entities for calculating surface area.
+    This function calculates the extreme points of the inserted block
+    by accessing the block reference name and its entities directly.
+    It works similarly to other shape handling functions.
+    """
+    block_name = shape.dxf.name  # Block name from INSERT entity
+    block = shape.doc.blocks.get(block_name)  # Get the block object using its name from the shape's doc
+
+    points = {
+        'x': [],
+        'y': []
+    }
+
+    # Loop through all entities in the block and collect points
+    for entity in block:
+        if isinstance(entity, ezdxf.entities.Line):
+            points['x'].extend([entity.dxf.start.x, entity.dxf.end.x])
+            points['y'].extend([entity.dxf.start.y, entity.dxf.end.y])
+        elif isinstance(entity, ezdxf.entities.LWPolyline):
+            for pnt in entity.points():
+                points['x'].append(pnt[0])
+                points['y'].append(pnt[1])
+        elif isinstance(entity, ezdxf.entities.Spline):
+            approx_curve = entity.flattening(0.1)
+            polyline = ConstructionPolyline(vertices=approx_curve, close=entity.closed)
+            for pnt in polyline:
+                points['x'].append(pnt.x)
+                points['y'].append(pnt.y)
+        elif isinstance(entity, ezdxf.entities.Circle):
+            points['x'].extend([entity.dxf.center.x - entity.dxf.radius, entity.dxf.center.x + entity.dxf.radius])
+            points['y'].extend([entity.dxf.center.y - entity.dxf.radius, entity.dxf.center.y + entity.dxf.radius])
+        elif isinstance(entity, ezdxf.entities.Arc):
+            spline = entity.to_spline()
+            approx_curve = spline.flattening(0.01)
+            polyline = ConstructionPolyline(vertices=approx_curve, close=spline.closed)
+            for pnt in polyline:
+                points['x'].append(pnt.x)
+                points['y'].append(pnt.y)
+
+    # Calculate the extreme points based on the collected points
+    determine_most_extreme_points(points)
